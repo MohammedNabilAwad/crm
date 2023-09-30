@@ -1,0 +1,789 @@
+Sun Sep 10 11:14:02 2023 [247987][-none-][FATAL] SECURITY: User authentication for admin failed
+Sun Sep 10 11:14:02 2023 [247987][-none-][FATAL] FAILED LOGIN:attempts[1], ip[188.209.243.82], username[admin]
+Sun Sep 10 11:39:57 2023 [243365][1][FATAL] IP Address mismatch: SESSION IP: 188.209.243.82 CLIENT IP: 175.110.10.158
+Sun Sep 10 11:44:34 2023 [243364][1][FATAL] IP Address mismatch: SESSION IP: 175.110.10.158 CLIENT IP: 134.35.238.182
+Sun Sep 10 11:58:01 2023 [243538][1][FATAL] IP Address mismatch: SESSION IP: 175.110.8.181 CLIENT IP: 188.209.238.45
+Sun Sep 10 12:02:07 2023 [243538][1][FATAL] IP Address mismatch: SESSION IP: 188.209.238.45 CLIENT IP: 175.110.10.220
+Sun Sep 10 12:20:11 2023 [243364][1][FATAL] IP Address mismatch: SESSION IP: 175.110.8.15 CLIENT IP: 185.80.140.207
+Sun Sep 10 13:20:55 2023 [247989][1][FATAL] IP Address mismatch: SESSION IP: 185.80.140.207 CLIENT IP: 188.240.97.220
+Sun Sep 10 14:39:15 2023 [247989][1][FATAL] IP Address mismatch: SESSION IP: 175.110.9.26 CLIENT IP: 175.110.11.180
+Sun Sep 10 15:27:02 2023 [243455][1][FATAL] IP Address mismatch: SESSION IP: 175.110.11.180 CLIENT IP: 178.130.126.158
+Sun Sep 10 16:03:18 2023 [247989][1][FATAL] osyFileEdit - a code hook failed for target file: modules/Accounts/AccountFormBase.php - code hooks: Array
+(
+    [orig] => /select id, name, website, billing_address_city  from /
+    [new] => select id, name, website, billing_address_city, company_id_or_vat from 
+)
+
+Sun Sep 10 16:03:18 2023 [247989][1][FATAL] osyFileEdit - a code hook failed for target file: modules/Accounts/AccountFormBase.php - code hooks: Array
+(
+    [orig] => /(\$query[\s\t]*=[\s\t]*\$baseQuery.*name[\s\t]*like.*\$_POST\[\$prefix\.'name'\][^\}]*\})/m
+    [new] => $1
+	if(!empty(\$_POST[\$prefix."company_id_or_vat"])){
+		\$query = \$baseQuery ."  company_id_or_vat like '".\$_POST[\$prefix."company_id_or_vat"]."%'";
+	}
+)
+
+Sun Sep 10 17:18:09 2023 [243362][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sun Sep 10 17:22:04 2023 [243365][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sun Sep 10 17:30:19 2023 [250866][1][FATAL] IP Address mismatch: SESSION IP: 178.130.126.158 CLIENT IP: 178.130.83.170
+Sun Sep 10 17:59:17 2023 [250865][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sun Sep 10 18:08:27 2023 [250866][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Tue Sep 12 13:13:14 2023 [267763][8ec88469-65df-dfc0-963b-64f6e6faa4ed][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Tue Sep 12 13:13:14 2023 [267763][8ec88469-65df-dfc0-963b-64f6e6faa4ed][FATAL] Exception in Controller: خطأ في استرجاع بيانات السجل. ربما هذا السجل محذوف أو لا يُسمح لك باستعراض بياناته
+Tue Sep 12 13:13:14 2023 [267763][8ec88469-65df-dfc0-963b-64f6e6faa4ed][FATAL] backtrace:
+#0 /var/www/html/crm/include/MVC/View/views/view.detail.php(102): sugar_die()
+#1 /var/www/html/crm/custom/modules/Leads/views/view.detail.php(63): ViewDetail->display()
+#2 /var/www/html/crm/include/MVC/View/SugarView.php(211): LeadsViewDetail->display()
+#3 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#4 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#5 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#6 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#7 {main}
+Tue Sep 12 15:10:37 2023 [1481][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Tue Sep 12 17:53:41 2023 [944][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Tue Sep 12 18:00:24 2023 [1657][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Tue Sep 12 18:03:12 2023 [1655][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Tue Sep 12 18:42:18 2023 [1302][1][FATAL] IP Address mismatch: SESSION IP: 175.110.9.225 CLIENT IP: 178.130.115.229
+Tue Sep 12 20:22:52 2023 [1302][1][FATAL] IP Address mismatch: SESSION IP: 178.130.115.229 CLIENT IP: 188.240.125.103
+Tue Sep 12 20:37:49 2023 [2443][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Tue Sep 12 20:37:49 2023 [2443][1][FATAL] Exception in Controller: 
+Tue Sep 12 20:37:49 2023 [2443][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/Administration/expandDatabase.php(49): sugar_die()
+#1 /var/www/html/crm/include/MVC/View/SugarView.php(818): include_once('/var/www/html/c...')
+#2 /var/www/html/crm/include/MVC/View/views/view.classic.php(72): SugarView->includeClassicFile()
+#3 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewClassic->display()
+#4 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#5 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#6 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#7 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#8 {main}
+Wed Sep 13 03:14:27 2023 [1193][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Thu Sep 14 13:15:38 2023 [8354][-none-][FATAL] SECURITY: User authentication for admin failed
+Thu Sep 14 13:15:38 2023 [8354][-none-][FATAL] FAILED LOGIN:attempts[1], ip[134.35.4.164], username[admin]
+Thu Sep 14 13:43:11 2023 [16194][1][FATAL] Mysqli_query failed.
+Thu Sep 14 13:43:11 2023 [16194][1][FATAL] Executing repair query:  Query Failed: CREATE TABLE ad001_certificate_of_origin (id char(36)  NOT NULL ,name varchar(255)  NULL ,date_entered datetime  NULL ,date_modified datetime  NULL ,modified_user_id char(36)  NULL ,created_by char(36)  NULL ,description text  NULL ,deleted bool  DEFAULT '0' NULL ,assigned_user_id char(36)  NULL  , PRIMARY KEY (id)) CHARACTER SET utf8 COLLATE utf8_general_ci: MySQL error 1050: Table 'ad001_certificate_of_origin' already exists
+Thu Sep 14 13:43:11 2023 [16194][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 13:43:11 2023 [16194][1][FATAL] Exception in Controller: فشل في قاعدة البيانات.  فضلاً ارجع لسجل الأخطاء الخاص بالنظام لتحصل على مزيد من التفاصيل.
+Thu Sep 14 13:43:11 2023 [16194][1][FATAL] backtrace:
+#0 /var/www/html/crm/include/database/DBManager.php(353): sugar_die()
+#1 /var/www/html/crm/include/database/DBManager.php(328): DBManager->registerError()
+#2 /var/www/html/crm/include/database/MysqliManager.php(179): DBManager->checkError()
+#3 /var/www/html/crm/modules/Administration/repairDatabase.php(93): MysqliManager->query()
+#4 /var/www/html/crm/include/MVC/View/SugarView.php(818): include_once('/var/www/html/c...')
+#5 /var/www/html/crm/include/MVC/View/views/view.classic.php(72): SugarView->includeClassicFile()
+#6 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewClassic->display()
+#7 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#8 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#9 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#10 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#11 {main}
+Thu Sep 14 13:43:33 2023 [16291][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 13:43:33 2023 [16291][1][FATAL] Exception in Controller: 
+Thu Sep 14 13:43:33 2023 [16291][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/Administration/expandDatabase.php(49): sugar_die()
+#1 /var/www/html/crm/include/MVC/View/SugarView.php(818): include_once('/var/www/html/c...')
+#2 /var/www/html/crm/include/MVC/View/views/view.classic.php(72): SugarView->includeClassicFile()
+#3 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewClassic->display()
+#4 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#5 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#6 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#7 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#8 {main}
+Thu Sep 14 14:02:49 2023 [16454][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 14:02:49 2023 [16454][1][FATAL] Exception in Controller: 
+Thu Sep 14 14:02:49 2023 [16454][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/Administration/expandDatabase.php(49): sugar_die()
+#1 /var/www/html/crm/include/MVC/View/SugarView.php(818): include_once('/var/www/html/c...')
+#2 /var/www/html/crm/include/MVC/View/views/view.classic.php(72): SugarView->includeClassicFile()
+#3 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewClassic->display()
+#4 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#5 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#6 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#7 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#8 {main}
+Thu Sep 14 14:18:32 2023 [16193][1][FATAL] Undefined index: module
+Thu Sep 14 14:18:32 2023 [16193][1][FATAL] Invalid or missing SubPanelDefinition property: subpanel_name
+Thu Sep 14 14:18:32 2023 [16193][1][FATAL] Failed to load original or custom subpanel data for eapm in 
+Thu Sep 14 15:13:13 2023 [16291][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 15:13:13 2023 [16291][1][FATAL] Exception in Controller: 
+Thu Sep 14 15:13:13 2023 [16291][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/Administration/expandDatabase.php(49): sugar_die()
+#1 /var/www/html/crm/include/MVC/View/SugarView.php(818): include_once('/var/www/html/c...')
+#2 /var/www/html/crm/include/MVC/View/views/view.classic.php(72): SugarView->includeClassicFile()
+#3 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewClassic->display()
+#4 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#5 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#6 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#7 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#8 {main}
+Thu Sep 14 15:19:40 2023 [16192][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 15:19:40 2023 [16192][1][FATAL] Exception in Controller: 
+Thu Sep 14 15:19:40 2023 [16192][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/Administration/expandDatabase.php(49): sugar_die()
+#1 /var/www/html/crm/include/MVC/View/SugarView.php(818): include_once('/var/www/html/c...')
+#2 /var/www/html/crm/include/MVC/View/views/view.classic.php(72): SugarView->includeClassicFile()
+#3 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewClassic->display()
+#4 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#5 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#6 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#7 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#8 {main}
+Thu Sep 14 17:28:19 2023 [19178][1][FATAL] IP Address mismatch: SESSION IP: 188.209.246.255 CLIENT IP: 175.110.9.93
+Thu Sep 14 18:57:25 2023 [20803][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 18:57:25 2023 [20803][1][FATAL] Exception in Controller: 
+Thu Sep 14 18:57:25 2023 [20803][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/Administration/expandDatabase.php(49): sugar_die()
+#1 /var/www/html/crm/include/MVC/View/SugarView.php(818): include_once('/var/www/html/c...')
+#2 /var/www/html/crm/include/MVC/View/views/view.classic.php(72): SugarView->includeClassicFile()
+#3 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewClassic->display()
+#4 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#5 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#6 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#7 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#8 {main}
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROMNAME_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_NAME_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_NAME_IS_EMPTY]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROMNAME_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_NAME_IS_NOT_SET]
+Thu Sep 14 19:08:55 2023 [19375][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_NAME_IS_EMPTY]
+Thu Sep 14 19:35:18 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:18 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:18 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:18 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:19 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: stat(): stat failed for upload/import/status_1.csv
+Thu Sep 14 19:35:20 2023 [20787][1][FATAL] Caught error: touch(): UploadStream::stream_metadata is not implemented!
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:38 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:39 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:36:40 2023 [21333][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 19:49:52 2023 [24084][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Thu Sep 14 19:49:52 2023 [24084][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Thu Sep 14 20:02:19 2023 [22538][1][FATAL] IP Address mismatch: SESSION IP: 175.110.9.93 CLIENT IP: 188.240.123.95
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:17 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:18 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:19 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:10:20 2023 [22538][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:12:17 2023 [24057][1][FATAL] error loading relationship aos_products_purchases
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROMNAME_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_NAME_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_NAME_IS_EMPTY]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROMNAME_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_NAME_IS_NOT_SET]
+Thu Sep 14 20:25:57 2023 [24308][1][FATAL] A language key does not found: [ERR_FIELD_FROM_ADDR_NAME_IS_EMPTY]
+Thu Sep 14 20:27:12 2023 [24308][1][FATAL] Caught error: stat(): stat failed for upload/import/status_1.csv
+Thu Sep 14 20:27:12 2023 [24308][1][FATAL] Caught error: touch(): UploadStream::stream_metadata is not implemented!
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:51 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:52 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: Trying to access array offset on value of type bool
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: stat(): stat failed for upload/import/status_1.csv
+Thu Sep 14 20:28:53 2023 [24308][1][FATAL] Caught error: touch(): UploadStream::stream_metadata is not implemented!
+Thu Sep 14 21:53:47 2023 [25254][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Thu Sep 14 21:53:47 2023 [25254][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Thu Sep 14 21:58:43 2023 [24667][1][FATAL] Undefined index: module
+Thu Sep 14 21:58:43 2023 [24667][1][FATAL] Invalid or missing SubPanelDefinition property: subpanel_name
+Thu Sep 14 21:58:43 2023 [24667][1][FATAL] Failed to load original or custom subpanel data for eapm in 
+Thu Sep 14 22:03:31 2023 [25254][2c55ecb5-a857-ee3f-b480-64dbcbd871a7][FATAL] Undefined index: module
+Thu Sep 14 22:03:31 2023 [25254][2c55ecb5-a857-ee3f-b480-64dbcbd871a7][FATAL] Invalid or missing SubPanelDefinition property: subpanel_name
+Thu Sep 14 22:03:31 2023 [25254][2c55ecb5-a857-ee3f-b480-64dbcbd871a7][FATAL] Failed to load original or custom subpanel data for eapm in 
+Thu Sep 14 22:13:07 2023 [27406][-none-][FATAL] SECURITY: User authentication for mohammed failed
+Thu Sep 14 22:13:07 2023 [27406][-none-][FATAL] FAILED LOGIN:attempts[1], ip[188.240.123.95], username[mohammed]
+Thu Sep 14 22:13:07 2023 [27406][-none-][FATAL] SECURITY: User authentication for mohammed failed
+Thu Sep 14 22:13:07 2023 [27406][-none-][FATAL] FAILED LOGIN:attempts[1], ip[188.240.123.95], username[mohammed]
+Thu Sep 14 22:26:45 2023 [27206][1][FATAL] error loading relationship project_resource
+Thu Sep 14 22:26:45 2023 [27206][1][FATAL] error loading relationship am_projecttemplates_resources
+Thu Sep 14 22:32:12 2023 [27413][-none-][FATAL] SECURITY: User authentication for test failed
+Thu Sep 14 22:32:12 2023 [27413][-none-][FATAL] FAILED LOGIN:attempts[1], ip[188.240.123.95], username[test]
+Thu Sep 14 22:32:13 2023 [27413][-none-][FATAL] SECURITY: User authentication for test failed
+Thu Sep 14 22:32:13 2023 [27413][-none-][FATAL] FAILED LOGIN:attempts[1], ip[188.240.123.95], username[test]
+Thu Sep 14 22:36:30 2023 [24687][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 22:36:30 2023 [24687][1][FATAL] Exception in Controller: DeployedMetaDataImplementation->getFileName(): View Array is not recognized
+Thu Sep 14 22:36:30 2023 [24687][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/ModuleBuilder/parsers/views/DeployedMetaDataImplementation.php(400): sugar_die()
+#1 /var/www/html/crm/modules/ModuleBuilder/parsers/views/DeployedMetaDataImplementation.php(114): DeployedMetaDataImplementation->getFileName()
+#2 /var/www/html/crm/modules/ModuleBuilder/views/view.resetmodule.php(183): DeployedMetaDataImplementation->__construct()
+#3 /var/www/html/crm/modules/ModuleBuilder/views/view.resetmodule.php(108): ViewResetmodule->removeCustomLayouts()
+#4 /var/www/html/crm/modules/ModuleBuilder/views/view.resetmodule.php(68): ViewResetmodule->handleSave()
+#5 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewResetmodule->display()
+#6 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#7 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#8 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#9 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#10 {main}
+Thu Sep 14 22:54:53 2023 [27413][1][FATAL] Exception handling in /var/www/html/crm/include/MVC/Controller/SugarController.php:400
+Thu Sep 14 22:54:53 2023 [27413][1][FATAL] Exception in Controller: DeployedMetaDataImplementation->getFileName(): View Array is not recognized
+Thu Sep 14 22:54:53 2023 [27413][1][FATAL] backtrace:
+#0 /var/www/html/crm/modules/ModuleBuilder/parsers/views/DeployedMetaDataImplementation.php(400): sugar_die()
+#1 /var/www/html/crm/modules/ModuleBuilder/parsers/views/DeployedMetaDataImplementation.php(114): DeployedMetaDataImplementation->getFileName()
+#2 /var/www/html/crm/modules/ModuleBuilder/views/view.resetmodule.php(183): DeployedMetaDataImplementation->__construct()
+#3 /var/www/html/crm/modules/ModuleBuilder/views/view.resetmodule.php(108): ViewResetmodule->removeCustomLayouts()
+#4 /var/www/html/crm/modules/ModuleBuilder/views/view.resetmodule.php(68): ViewResetmodule->handleSave()
+#5 /var/www/html/crm/include/MVC/View/SugarView.php(211): ViewResetmodule->display()
+#6 /var/www/html/crm/include/MVC/Controller/SugarController.php(435): SugarView->process()
+#7 /var/www/html/crm/include/MVC/Controller/SugarController.php(375): SugarController->processView()
+#8 /var/www/html/crm/include/MVC/SugarApplication.php(113): SugarController->execute()
+#9 /var/www/html/crm/index.php(52): SugarApplication->execute()
+#10 {main}
+Thu Sep 14 23:14:19 2023 [25839][1][FATAL] IP Address mismatch: SESSION IP: 188.240.123.95 CLIENT IP: 175.110.10.207
+Fri Sep 15 11:51:39 2023 [43097][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 15 12:00:04 2023 [42785][1][FATAL] IP Address mismatch: SESSION IP: 188.209.230.9 CLIENT IP: 175.110.10.184
+Fri Sep 15 15:40:47 2023 [46740][2c55ecb5-a857-ee3f-b480-64dbcbd871a7][FATAL] IP Address mismatch: SESSION IP: 175.110.10.211 CLIENT IP: 188.209.246.84
+Fri Sep 15 15:41:23 2023 [46739][1][FATAL] IP Address mismatch: SESSION IP: 175.110.10.184 CLIENT IP: 188.209.246.84
+Sat Sep 16 12:40:12 2023 [55501][1][FATAL] Class Connectors does not exist, unable to rename.
+Sat Sep 16 12:40:12 2023 [55501][1][FATAL] Class Version does not exist, unable to rename.
+Sat Sep 16 12:40:12 2023 [55501][1][FATAL] Class CustomFields does not exist, unable to rename.
+Sat Sep 16 12:40:12 2023 [55501][1][FATAL] Class Audit does not exist, unable to rename.
+Sat Sep 16 12:46:37 2023 [66186][1][FATAL] Class Connectors does not exist, unable to rename.
+Sat Sep 16 12:46:37 2023 [66186][1][FATAL] Class Version does not exist, unable to rename.
+Sat Sep 16 12:46:37 2023 [66186][1][FATAL] Class CustomFields does not exist, unable to rename.
+Sat Sep 16 12:46:37 2023 [66186][1][FATAL] Class Audit does not exist, unable to rename.
+Sat Sep 16 12:57:50 2023 [65811][1][FATAL] Class Connectors does not exist, unable to rename.
+Sat Sep 16 12:57:50 2023 [65811][1][FATAL] Class Version does not exist, unable to rename.
+Sat Sep 16 12:57:50 2023 [65811][1][FATAL] Class CustomFields does not exist, unable to rename.
+Sat Sep 16 12:57:50 2023 [65811][1][FATAL] Class Audit does not exist, unable to rename.
+Sat Sep 16 14:05:15 2023 [68241][1][FATAL] Missing relationship definition accounts_guar_guarantees_1. skipping accounts_guar_guarantees_1 subpanel
+Sat Sep 16 14:07:52 2023 [69383][1][FATAL] Missing relationship definition accounts_guar_guarantees_1. skipping accounts_guar_guarantees_1 subpanel
+Sat Sep 16 14:10:48 2023 [68958][1][FATAL] Missing relationship definition accounts_guar_guarantees_1. skipping accounts_guar_guarantees_1 subpanel
+Sat Sep 16 14:17:28 2023 [55501][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sat Sep 16 14:17:35 2023 [65811][1][FATAL] MysqliManager: Empty query
+Sat Sep 16 14:45:37 2023 [67467][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sat Sep 16 14:45:44 2023 [69383][1][FATAL] MysqliManager: Empty query
+Sat Sep 16 15:00:56 2023 [69383][1][FATAL] Missing relationship definition guar_guarantees_aos_quotes_1. skipping guar_guarantees_aos_quotes_1 subpanel
+Sat Sep 16 15:10:58 2023 [68958][1][FATAL] Missing relationship definition guar_guarantees_aos_quotes_1. skipping guar_guarantees_aos_quotes_1 subpanel
+Sat Sep 16 15:13:32 2023 [66186][1][FATAL] Missing relationship definition guar_guarantees_aos_quotes_1. skipping guar_guarantees_aos_quotes_1 subpanel
+Sat Sep 16 15:45:26 2023 [71544][1][FATAL] Missing relationship definition accounts_guar_guarantees_1. skipping accounts_guar_guarantees_1 subpanel
+Sat Sep 16 16:10:24 2023 [68958][1][FATAL] خطأ: حدث خطأ أثناء رفع الملف، من فضلك اتصل بمدير النظام لطلب المساعدة.
+Sat Sep 16 16:56:25 2023 [68958][1][FATAL] error loading relationship aos_products_purchases
+Sat Sep 16 17:07:31 2023 [66186][1][FATAL] IP Address mismatch: SESSION IP: 178.130.88.100 CLIENT IP: 185.80.140.174
+Sat Sep 16 17:25:24 2023 [67467][1][FATAL] IP Address mismatch: SESSION IP: 185.80.140.174 CLIENT IP: 178.130.113.37
+Sat Sep 16 18:17:45 2023 [71724][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Sat Sep 16 18:17:45 2023 [71724][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Sat Sep 16 18:21:00 2023 [66186][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Sat Sep 16 18:21:00 2023 [66186][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Sat Sep 16 18:27:03 2023 [71724][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sat Sep 16 18:28:51 2023 [73092][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Sat Sep 16 18:28:51 2023 [73092][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Sat Sep 16 18:28:51 2023 [73092][1][FATAL] SugarPHPMailer encountered an error: Invalid address:  (addAnAddress to): 
+Sun Sep 17 12:23:09 2023 [86529][1][FATAL] خطأ: حدث خطأ أثناء رفع الملف، من فضلك اتصل بمدير النظام لطلب المساعدة.
+Sun Sep 17 18:37:00 2023 [83252][1][FATAL] خطأ: حدث خطأ أثناء رفع الملف، من فضلك اتصل بمدير النظام لطلب المساعدة.
+Mon Sep 18 10:12:08 2023 [102896][1][FATAL] IP Address mismatch: SESSION IP: 78.137.90.67 CLIENT IP: 5.255.14.181
+Mon Sep 18 10:30:27 2023 [102897][1][FATAL] Missing relationship definition mem_memos_aos_pdf_templates_1. skipping mem_memos_aos_pdf_templates_1 subpanel
+Mon Sep 18 10:50:36 2023 [124144][1][FATAL] IP Address mismatch: SESSION IP: 78.137.90.67 CLIENT IP: 5.255.14.181
+Mon Sep 18 11:01:16 2023 [124210][1][FATAL] IP Address mismatch: SESSION IP: 78.137.90.67 CLIENT IP: 5.255.14.181
+Mon Sep 18 11:03:16 2023 [124210][1][FATAL] IP Address mismatch: SESSION IP: 78.137.90.67 CLIENT IP: 5.255.14.181
+Mon Sep 18 11:12:30 2023 [102897][1][FATAL] IP Address mismatch: SESSION IP: 78.137.90.67 CLIENT IP: 134.35.169.122
+Mon Sep 18 11:13:06 2023 [124144][1][FATAL] IP Address mismatch: SESSION IP: 134.35.169.122 CLIENT IP: 5.255.14.181
+Mon Sep 18 14:08:52 2023 [105385][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Mon Sep 18 14:10:44 2023 [105385][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 13:39:24 2023 [237847][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 14:06:26 2023 [228431][1][FATAL] Meeting::save: Bad date ٠٩/١٨/٢٠٢٣ ٠٩:٠٠ for format m/d/Y H:i
+Fri Sep 22 15:53:50 2023 [228429][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:54:00 2023 [239641][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:54:17 2023 [237837][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:54:53 2023 [237847][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:55:56 2023 [240701][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:56:16 2023 [240701][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:56:45 2023 [228429][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:57:02 2023 [240027][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 15:57:35 2023 [237839][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Fri Sep 22 18:46:06 2023 [242075][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sun Sep 24 03:54:11 2023 [267691][1][FATAL] Bad subpanel definition, it has incorrect value for get_subpanel_data property osy_service
+Sun Sep 24 03:55:31 2023 [267681][1][FATAL] MysqliManager: Empty query
+Sun Sep 24 09:43:41 2023 [263753][1][FATAL] log call at: modules/EmailMan/tpls/config.tpl:465 - styleChecked is not set
+Sun Sep 24 09:55:23 2023 [263750][1][FATAL] log call at: modules/EmailMan/tpls/config.tpl:465 - styleChecked is not set
+Sun Sep 24 10:17:40 2023 [267995][1][FATAL] log call at: modules/EmailMan/tpls/config.tpl:465 - styleChecked is not set
+Sun Sep 24 10:21:49 2023 [273353][1][FATAL] log call at: modules/EmailMan/tpls/config.tpl:465 - styleChecked is not set
+Sun Sep 24 12:06:17 2023 [263753][1][FATAL] Undefined index: module
+Sun Sep 24 12:06:17 2023 [263753][1][FATAL] Invalid or missing SubPanelDefinition property: subpanel_name
+Sun Sep 24 12:06:17 2023 [263753][1][FATAL] Failed to load original or custom subpanel data for eapm in 
+Tue Sep 26 10:48:01 2023 [313949][1][FATAL] log call at: modules/EmailMan/tpls/config.tpl:465 - styleChecked is not set

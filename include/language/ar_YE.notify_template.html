@@ -1,0 +1,332 @@
+<!--
+/**
+ *
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ *
+ * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * Copyright (C) 2011 - 2018 SalesAgility Ltd.
+ *
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ *
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ *
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ *
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * reasonably feasible for technical reasons, the Appropriate Legal Notices must
+ * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ */
+-->
+<!-- BEGIN: Quote_Subject -->
+<p>عرض السعر - {QUOTE_SUBJECT}</p>
+<!-- END: Quote_Subject -->
+<!-- BEGIN: Quote -->
+<p><b>{ASSIGNER}</b> قام بتعيين عرض السعر إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الموضوع: {QUOTE_SUBJECT}<br/>
+الحالة: {QUOTE_STATUS}<br/>
+تاريخ الإغلاق المتوقع: {QUOTE_CLOSEDATE}<br/>
+الوصف: {QUOTE_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذه التكلفة</a>.</p>
+<!-- END: Quote -->
+
+<!-- BEGIN: Account_Subject -->
+<p>الحساب - {ACCOUNT_NAME}</p>
+<!-- END: Account_Subject -->
+<!-- BEGIN: Account -->
+<p><b>{ASSIGNER}</b> قام بتعيين الحساب إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الاسم: {ACCOUNT_NAME}<br/>
+النوع: {ACCOUNT_TYPE}<br/>
+الوصف: {ACCOUNT_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذا الحساب</a>.</p>
+<!-- END: Account -->
+
+<!-- BEGIN: Case_Subject -->
+<p>القضية - {CASE_SUBJECT}</p>
+<!-- END: Case_Subject -->
+<!-- BEGIN: Case -->
+<p><b>{ASSIGNER}</b> قام بإسناد القضية إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الموضوع: {CASE_SUBJECT}<br/>
+الأولوية: {CASE_PRIORITY}<br/>
+الحالة: {CASE_STATUS}<br/>
+الوصف: {CASE_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة القضية</a>.</p>
+<!-- END: Case -->
+
+<!-- BEGIN: Task_Subject -->
+<p>المهمة - {TASK_SUBJECT}</p>
+<!-- END: Task_Subject -->
+<!-- BEGIN: Task -->
+<p><b>{ASSIGNER}</b> قام بتعيين المهمة إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الموضوع: {TASK_SUBJECT}<br/>
+الأولوية: {TASK_PRIORITY}<br/>
+تاريخ الاستحقاق: {TASK_DUEDATE}<br/>
+الحالة: {TASK_STATUS}<br/>
+الوصف: {TASK_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة المهمة </a>.</p>
+<!-- END: Task -->
+
+<!-- BEGIN: Meeting_Subject -->
+<p>الاجتماع - {MEETING_SUBJECT}</p>
+<!-- END: Meeting_Subject -->
+<!-- BEGIN: Meeting -->
+<p>إلى: {MEETING_TO}</p>
+<p><b>{ASSIGNER}</b> قام بدعوتك إلى اجتماع</p>
+<p>
+الموضوع: {MEETING_SUBJECT}<br/>
+الموقع: {MEETING_LOCATION}<br/>
+تاريخ البدء: {MEETING_STARTDATE}<br/>
+تاريخ الإنتهاء: {MEETING_ENDDATE}
+</p>
+<p>
+<!-- BEGIN: Meeting_External_API -->
+رابط الاجتماع URL: {MEETING_URL}
+</p>
+<!-- END: Meeting_External_API -->
+<p>الوصف: {MEETING_DESCRIPTION}<br/>
+</p>
+<p>---</p>
+<p><a href={ACCEPT_URL}&accept_status=accept>الموافقة على هذا الاجتماع</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=tentative>موافقة أولية على هذا الاجتماع</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=decline>رفض هذا الاجتماع</a>.</p>
+<!-- END: Meeting -->
+
+<!-- BEGIN: MeetingSpecial_Subject -->
+<p>الاجتماع - {MEETING_SUBJECT}</p>
+<!-- END: MeetingSpecial_Subject -->
+<!-- BEGIN: MeetingSpecial -->
+<p><b>{ASSIGNER}</b> قام بتعيين الاجتماع إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الموضوع: {MEETING_SUBJECT}<br/>
+الموقع: {MEETING_LOCATION}<br/>
+الحالة: {MEETING_STATUS}<br/>
+تاريخ البدء: {MEETING_STARTDATE}<br/>
+تاريخ الانتهاء: {MEETING_ENDDATE}<br/>
+الوصف: {MEETING_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذا الاجتماع</a>.</p>
+<!-- END: MeetingSpecial -->
+
+<!-- BEGIN: MeetingReminder_Subject -->
+<p>تذكير باجتماع - {MEETING_SUBJECT}</p>
+<!-- END: MeetingSpecial_Subject -->
+<!-- BEGIN: MeetingReminder -->
+<p>
+العنوان: {MEETING_SUBJECT}<br/>
+الزمان: {MEETING_STARTDATE}<br/>
+المكان: {MEETING_LOCATION}<br/>
+المنشئ: {MEETING_CREATED_BY}
+</p>
+<!-- END: MeetingReminder -->
+
+<!-- BEGIN: Email_Subject -->
+<p>البريد الإلكتروني - {EMAIL_SUBJECT}</p>
+<!-- END: Email_Subject -->
+<!-- BEGIN: Email -->
+<p><b>{ASSIGNER}</b> قام بتعيين البريد الإلكتروني إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الموضوع: {EMAIL_SUBJECT}<br/>
+تاريخ الإرسال: {EMAIL_DATESENT}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذه الرسالة</a>.</p>
+<!-- END: Email -->
+
+<!-- BEGIN: Contact_Subject -->
+<p>جهة الاتصال - {CONTACT_NAME}</p>
+<!-- END: Contact_Subject -->
+<!-- BEGIN: Contact -->
+<p><b>{ASSIGNER}</b> قام بتعيين جهة الاتصال إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الاسم: {CONTACT_NAME}<br/>
+الوصف: {CONTACT_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة جهة الاتصال هذه</a>.</p>
+<!-- END: Contact -->
+
+<!-- BEGIN: Lead_Subject -->
+<p>العملاء المحتملون - {LEAD_NAME}</p>
+<!-- END: Lead_Subject -->
+<!-- BEGIN: Lead -->
+<p><b>{ASSIGNER}</b> قام بتعيين العميل المحتمل إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الاسم: {LEAD_NAME}<br/>
+مصدر العملاء المحتملين: {LEAD_SOURCE}<br/>
+الحالة: {LEAD_STATUS}<br/>
+الوصف: {LEAD_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة العميل المحتمل هذا</a>.</p>
+<!-- END: Lead -->
+
+<!-- BEGIN: Opportunity_Subject -->
+<p>الفرصة - {OPPORTUNITY_NAME}</p>
+<!-- END: Opportunity_Subject -->
+<!-- BEGIN: Opportunity -->
+<p><b>{ASSIGNER}</b> قام بتعيين الفرصة إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الاسم: {OPPORTUNITY_NAME}<br/>
+المبلغ: {OPPORTUNITY_AMOUNT}<br/>
+تاريخ الإغلاق المتوقع: {OPPORTUNITY_CLOSEDATE}<br/>
+مرحلة المبيعات: {OPPORTUNITY_STAGE}<br/>
+الوصف: {OPPORTUNITY_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذه الفرصة</a>.</p>
+<!-- END: Opportunity -->
+
+<!-- BEGIN: Bug_Subject -->
+<p>خطأ برمجي - {BUG_SUBJECT}</p>
+<!-- END: Bug_Subject -->
+<!-- BEGIN: Bug -->
+<p><b>{ASSIGNER}</b> قام بتعيين الخطأ البرمجي إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+رقم الخطأ: {BUG_BUG_NUMBER}<br/>
+الموضوع: {BUG_SUBJECT}<br/>
+النوع: {BUG_TYPE}<br/>
+الأولوية: {BUG_PRIORITY}<br/>
+الحالة: {BUG_STATUS}<br/>
+الحل: {BUG_RESOLUTION}<br/>
+الإصدار: {BUG_RELEASE}<br/>
+الوصف: {BUG_DESCRIPTION}<br/>
+سجل العمل: {BUG_WORK_LOG}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذا الخطأ البرمجي</a>.</p>
+<!-- END: Bug -->
+
+<!-- BEGIN: Default_Subject -->
+<p>تعيين {OBJECT}</p>
+<!-- END: Default_Subject -->
+<!-- BEGIN: Default -->
+<p><b>{ASSIGNER}</b> قام بتعيين (n) {OBJECT} إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>يمكنك <a href={URL}>معاينة هذا {OBJECT}</a>.</p>
+<!-- END: Default -->
+
+<!-- BEGIN: Call_Subject -->
+<p>الاتصال - {CALL_SUBJECT}</p>
+<!-- END: Call_Subject -->
+<!-- BEGIN: Call -->
+<p>إلى: {CALL_TO}</p>
+<p><b>{ASSIGNER}</b> قام بدعوتك إلى إجراء اتصال</p>
+<p>
+الموضوع: {CALL_SUBJECT}<br/>
+الحالة: {CALL_STATUS}<br/>
+تاريخ البدء: {CALL_STARTDATE}<br/>
+المدة: {CALL_HOURS} ساعة، {CALL_MINUTES} دقيقة<br/>
+الوصف: {CALL_DESCRIPTION}<br/>
+</p>
+<p>---</p>
+<p><a href={ACCEPT_URL}&accept_status=accept>وافق على هذا الاتصال</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=tentative>موافقة أولية على هذا الاتصال</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=decline>رفض هذا الاتصال</a>.</p>
+<!-- END: Call -->
+
+<!-- BEGIN: CallSpecial_Subject -->
+<p>الاتصال - {CALL_SUBJECT}</p>
+<!-- END: CallSpecial_Subject -->
+<!-- BEGIN: CallSpecial -->
+<p><b>{ASSIGNER}</b> قام بتعيين الاتصال إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الموضوع: {CALL_SUBJECT}<br/>
+الحالة: {CALL_STATUS}<br/>
+تاريخ البدء: {CALL_STARTDATE}<br/>
+المدة: {CALL_HOURS} ساعة، {CALL_MINUTES} دقيقة<br/>
+الوصف: {CALL_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذا الاتصال</a>.</p>
+<!-- END: CallSpecial -->
+
+<!-- BEGIN: CallReminder_Subject -->
+<p>تذكير باتصال - {CALL_SUBJECT}</p>
+<!-- END: CallReminder_Subject -->
+<!-- BEGIN: CallReminder -->
+<p>
+العنوان: {CALL_SUBJECT}<br/>
+الزمان: {CALL_STARTDATE}<br/>
+المنشئ: {CALL_CREATED_BY}
+</p>
+<!-- END: CallReminder -->
+
+<!-- BEGIN: Campaign_Subject -->
+<p>الحملة التسويقية - {CAMPAIGN_NAME}</p>
+<!-- END: Campaign_Subject -->
+<!-- BEGIN: Campaign -->
+<p><b>{ASSIGNER}</b> قام بتعيين الحملة إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+الموضوع: {CAMPAIGN_NAME}<br/>
+المبلغ: {CAMPAIGN_AMOUNT}<br/>
+تاريخ الإغلاق: {CAMPAIGN_CLOSEDATE}<br/>
+الحالة: {CAMPAIGN_STATUS}<br/>
+الوصف: {CAMPAIGN_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذه الحملة</a>.</p>
+<!-- END: Campaign -->
+
+<!-- BEGIN: Quota_Subject -->
+<p>الحصص - الحصة الخاصة بك والمُتعلقة بـ{QUOTA_TIMEPERIOD}</p>
+<!-- END: Quota_Subject -->
+<!-- BEGIN: Quota -->
+<p><b>{ASSIGNER}</b> قام بتعيين حصة إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>
+    المبلغ: {QUOTA_AMOUNT}<br/>
+    الفترة الزمنية: {QUOTA_TIMEPERIOD}
+</p>
+<p>يمكنك <a href={QUOTA_URL}>معاينة تعيين الحصة هذا</a>.</p>
+<!-- END: Quota -->
+
+<!-- BEGIN: KBDocument_Subject -->
+<p>الوثيقة - {KBDOCUMENT_NAME}</p>
+<!-- END: KBDocument_Subject -->
+<!-- BEGIN: KBDocument -->
+{NOTIFICATION_MESSAGE}
+
+<p>
+الاسم: {KBDOCUMENT_NAME}<br/>
+تاريخ الإنشاء: {KBDOCUMENT_DATE_CREATED}<br/>
+المنشئ: {KBDOCUMENT_CREATED_BY}<br/>
+الحالة: {KBDOCUMENT_STATUS}<br/>
+الوصف: {KBDOCUMENT_DESCRIPTION}
+</p>
+<p>يمكنك <a href={URL}>معاينة هذه الوثيقة</a>.</p>
+<!-- END: KBDocument -->
+
+<!-- BEGIN: Contract_Subject -->
+<p>العقد - {CONTRACT_NAME}</p>
+<!-- END: Contract_Subject -->
+<!-- BEGIN: Contract-->
+<p><b>{ASSIGNER}</b> قام بتعيين عقد إلى <b>{ASSIGNED_USER}</b>.</p>
+<p>يمكنك <a href={URL}>معاينة هذا العقد</a>.</p>
+<!-- END:Contract-->
+
+<!-- BEGIN: ContractSpecial_Subject -->
+<p>العقد - {CONTRACT_NAME}</p>
+<!-- END: ContractSpecial_Subject -->
+<!-- BEGIN: ContractSpecial -->
+<p>عقدك: {CONTRACT_NAME} ستنتهي فترته بتاريخ {CONTRACT_END_DATE}.</p>
+<p>يمكنك <a href={URL}>معاينة هذا العقد</a>.</p>
+<!-- END:ContractSpecial-->

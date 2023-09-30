@@ -1,0 +1,31 @@
+<script type="text/javascript">
+if(typeof(SUGAR) != 'undefined' &&  typeof(SUGAR.util) != 'undefined' &&  typeof(SUGAR.util.doWhen) != 'undefined') {
+
+    	SUGAR.util.doWhen("document.getElementById('footer') function osyDependency(oFieldValues, sMultiValueSeparator, bHiddenOnload, bIsEditView) {
+	
+    if(typeof(bHiddenOnload) == 'undefined') {
+            bHiddenOnload = true;
+
+", function() {
+    		
+        var oFieldValues = {
+                "other_role_function" : {
+                        field: "role_function",
+                        value: "^99$",
+                        attr: {
+                                "type": "<?php echo $GLOBALS['FOCUS']->field_defs['other_role_function']['type']; ?>",
+                                "labelKey": "<?php echo $GLOBALS['FOCUS']->field_defs['other_role_function']['vname']; ?>",
+                                "required": "<?php echo $GLOBALS['FOCUS']->field_defs['other_role_function']['required']; ?>",
+                                "module": "<?php echo $GLOBALS['FOCUS']->module_dir; ?>",
+                        },
+				},
+				
+			};
+    		
+    		osyDependency(oFieldValues);
+    		SUGAR.util.callOnChangeListers('role_function');
+
+    	});
+    		
+}
+</script>

@@ -1,0 +1,2 @@
+<?php
+/*$mod_strings['LBL_OPPORTUNITIES_OSY_PAYMENT_MANAGEMENT_1_FROM_OPPORTUNITIES_TITLE']='Subscription Fees';*/

@@ -1,0 +1,126 @@
+<?php
+$module_name = 'osy_contactspotentialmember';
+$viewdefs [$module_name] ['DetailView'] = array (
+		'templateMeta' => array (
+				'form' => array (
+						'buttons' => array (
+								'EDIT',
+								'DUPLICATE',
+								'DELETE',
+								'FIND_DUPLICATES'
+						)
+				),
+				'maxColumns' => '2',
+				'widths' => array (
+						array (
+								'label' => '10',
+								'field' => '30'
+						),
+						array (
+								'label' => '10',
+								'field' => '30'
+						)
+				),
+				'useTabs' => false,
+				'tabDefs' => array (
+						'LBL_CONTACT_INFORMATION' => array (
+								'newTab' => false,
+								'panelDefault' => 'expanded'
+						),
+						'LBL_PANEL_ADVANCED' => array (
+								'newTab' => false,
+								'panelDefault' => 'expanded'
+						),
+						'LBL_PANEL_ASSIGNMENT' => array (
+								'newTab' => false,
+								'panelDefault' => 'expanded'
+						)
+				),
+				'syncDetailEditViews' => true
+		),
+		'panels' => array (
+				'lbl_contact_information' => array (
+						array (
+								'last_name',
+								'first_name'
+						),
+						array (
+
+								'gender',
+								array (
+										'name' => 'lead_name',
+										'label' => 'LBL_LEAD_NAME',
+										'displayParams' => array (
+												'enableConnectors' => true,
+												'module' => 'Leads',
+												'connectors' => array (
+														0 => 'ext_rest_linkedin'
+												)
+										)
+								)
+						),
+						array (
+								'phone_work',
+								'phone_fax'
+						),
+
+						array (
+								array (
+										'name' => 'primary_address_street',
+										'label' => 'LBL_PRIMARY_ADDRESS',
+										'type' => 'osyaddress',
+										'displayParams' => array (
+												'key' => 'primary'
+										)
+								),
+								array (
+										'name' => 'alt_address_street',
+										'label' => 'LBL_ALTERNATE_ADDRESS',
+										'type' => 'osyaddress',
+										'displayParams' => array (
+												'key' => 'alt'
+										)
+								)
+						),
+						array (
+								'email1'
+						),
+						array (
+								'industry',
+								'description'
+						)
+				),
+				'LBL_PANEL_ADVANCED' => array (
+						array (
+								'role_function',
+								'other_role_function'
+						),
+						// OPENSYMBOLMOD - START - davide.dallapozza - 25/feb/2014
+						// *************************************************
+
+						array (
+								// 'contact_type',
+								'vip',
+								''
+						),
+
+						// OPENSYMBOLMOD - END - davide.dallapozza
+						// *************************************************
+						array (
+								'category',
+								'main_representative'
+						),
+						array (
+								'sync_contact',
+								'do_not_call'
+						)
+				),
+				'LBL_PANEL_ASSIGNMENT' => array (
+						array (
+								'assigned_user_name'
+						)
+				)
+		)
+);
+
+?>

@@ -1,0 +1,28 @@
+<?php
+// created: 2023-08-07 19:08:25
+$mod_strings = array (
+  'LBL_EDIT_BUTTON' => 'تعديل',
+  'LBL_FILE_URL' => 'رابط الملف ',
+  'LBL_URL' => 'الرابط',
+  'LBL_CONTACT' => 'جهة الإتصال',
+  'LBL_PART_NUMBER' => 'رقم الخدمة',
+  'LNK_NEW_RECORD' => 'إنشاء خدمة',
+  'LNK_LIST' => 'عرض الالخدمات',
+  'LBL_LIST_FORM_TITLE' => 'قائمة الخدمات',
+  'LBL_SEARCH_FORM_TITLE' => 'بحث الالخدمة',
+  'LBL_AOS_PRODUCT_CATEGORYS_NAME' => 'فئة الخدمة',
+  'LBL_AOS_PRODUCT_CATEGORIES' => 'فئات الخدمات',
+  'LBL_HOMEPAGE_TITLE' => 'الخدماتي',
+  'LBL_AOS_PRODUCT_CATEGORY' => 'معرف فئة الخدمة',
+  'LBL_MAINCODE' => 'رمز الخدمة',
+  'LBL_NAME' => 'اسم الخدمة',
+  'LBL_TYPE' => 'نوع الخدمة',
+  'LBL_PRODUCT_IMAGE' => 'صورة الخدمة',
+  'LBL_CUSTOMERS_PURCHASED_PRODUCTS_SUBPANEL_TITLE' => 'الطلبات',
+  'LBL_MODULE_NAME' => 'الخدمات',
+  'LBL_MODULE_TITLE' => 'الخدمات: الرئيسية',
+  'VALUE' => 'اسم الخدمة',
+  'LBL_AOS_QUOTE_NAME' => 'طلب خدمات',
+  'LBL_NEW_FORM_TITLE' => 'خدمة جديد',
+  'LBL_PRODUCTS_PURCHASES' => 'الطلبات',
+);

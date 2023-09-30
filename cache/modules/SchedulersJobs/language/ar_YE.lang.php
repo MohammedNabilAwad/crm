@@ -1,0 +1,28 @@
+<?php
+// created: 2023-09-30 13:36:30
+$mod_strings = array (
+  'LBL_ASSIGNED_TO_ID' => 'معرف المستخدم المكلف',
+  'LBL_ASSIGNED_TO_NAME' => 'أُسند إلى',
+  'LBL_NAME' => 'اسم العملية',
+  'LBL_EXECUTE_TIME' => 'وقت التشغيل',
+  'LBL_SCHEDULER_ID' => 'المجدول',
+  'LBL_STATUS' => 'حالة العملية',
+  'LBL_RESOLUTION' => 'النتيجة',
+  'LBL_MESSAGE' => 'الرسائل',
+  'LBL_DATA' => 'بيانات العملية',
+  'LBL_REQUEUE' => 'إعادة المحاولة عند الفشل',
+  'LBL_RETRY_COUNT' => 'الحد الأقصى للمحاولات',
+  'LBL_FAIL_COUNT' => 'حالات الفشل',
+  'LBL_INTERVAL' => 'الحد الأدنى للفاصل الزمني بين المحاولات',
+  'LBL_CLIENT' => 'التطبيق المالك',
+  'LBL_PERCENT' => 'نسبة الإنجاز',
+  'ERR_CALL' => 'لا يمكن طلب الدالة: %s',
+  'ERR_CURL' => 'دعم CURL عير متوفر - لا يمكن تشغيل عمليات URL',
+  'ERR_FAILED' => 'فشل غير متوقع، الرجاء التحقق من سجلات PHP و ملف suitecrm.log',
+  'ERR_PHP' => '%s [%d]: %s في %s في السطر %d',
+  'ERR_NOUSER' => 'لا يوجد معرف مستخدم محدد للعملية',
+  'ERR_NOSUCHUSER' => 'لم يتم العثور على معرف المستخدم %s',
+  'ERR_JOBTYPE' => 'نوع عملية غير معروف: %s',
+  'ERR_TIMEOUT' => 'فشل إجباري لانتهاء المهلة',
+  'ERR_JOB_FAILED_VERBOSE' => 'العمليات %1$s (%2$s) فشلت في مجدول العمليات (CRON)',
+);

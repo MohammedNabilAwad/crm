@@ -1,0 +1,249 @@
+<?php
+$module_name = 'osy_services_companies';
+$viewdefs [$module_name] = 
+array (
+  'EditView' => 
+  array (
+    'templateMeta' => 
+    array (
+      'maxColumns' => '2',
+      'widths' => 
+      array (
+        0 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+        1 => 
+        array (
+          'label' => '10',
+          'field' => '30',
+        ),
+      ),
+      'javascript' => '
+			<script type="text/javascript">
+				{php}
+					require_once("custom/include/osyVisibilityGrid.js.php");
+					$this->_tpl_vars["osyOnLoadVisibility"] = osyVisibilityGridInit($this);
+				{/php}
+				{if !empty($osyOnLoadVisibility)}
+					YAHOO.util.Event.on(window, "load", function() {ldelim} {$osyOnLoadVisibility} return true; {rdelim});
+				{/if}
+			</script>
+
+    		<script>
+				{literal}
+	
+				
+				function osy_lock_field(sSourceId, aTargetIds){
+					var sAttrValue = \'\';
+					var bAttrValue = false;
+					if($(\'#\'+sSourceId).val() != \'\'){
+						sAttrValue = \'disabled\';
+						bAttrValue = true;
+					}
+					$(aTargetIds).each(function(i, sId){
+						$(\'#\'+sId).attr(\'disabled\', sAttrValue).attr(\'disabled\', bAttrValue);
+					});
+				}
+		
+				function osy_unlock_fields(aTargetIds){
+					$(aTargetIds).each(function(i, sId){
+						$(\'#\'+sId).attr(\'disabled\', \'\').attr(\'disabled\', false);
+					});
+				}
+		
+				YAHOO.util.Event.onDOMReady(function() {
+					overrideSqsObject("lead_name",function(oSqsObject) {
+						oSqsObject[\'field_list\'] = ["account_name", "id"];
+						oSqsObject[\'populate_list\'] = ["lead_name", "lead_id"];
+						oSqsObject[\'conditions\'][0][\'name\'] = "account_name";
+						return oSqsObject;
+					});
+					$("#contact_name").blur(function(){
+						var args = "module=osy_services_companies&action=osyGetAccountFromContact&sugar_body_only=true&contact_id="+$("#contact_id").val();			
+						var callback = {
+							success: function(o){
+								eval("var ret = "+o.responseText+";");
+								$("#osy_account_id").val(ret.id);							
+								$("#account_name").val(ret.name);							
+								$("#account_name").blur();
+							}
+						}
+						YAHOO.util.Connect.asyncRequest("POST","index.php",callback,args);
+					});
+					
+
+					$("#btn_account_name,#btn_contact_name,#btn_lead_name,#btn_osy_contactspotentialmember_name").click(function () {
+						// workaround: in chrome e safari per ottenre il blur di un bottone devo prima dargli il focus.
+						if($.browser.webkit && $.browser.safari){
+							this.focus();
+						}
+					});
+
+					$("#account_name,#btn_account_name").blur(function(){
+							osy_lock_field("account_name", new Array("lead_name", "btn_lead_name", "btn_clr_lead_name", "osy_contactspotentialmember_name", "btn_osy_contactspotentialmember_name", "btn_clr_osy_contactspotentialmember_name"));
+						});
+					$("#btn_clr_account_name").click(function(){
+							osy_unlock_fields(new Array("lead_name", "btn_lead_name","btn_clr_lead_name", "osy_contactspotentialmember_name", "btn_osy_contactspotentialmember_name", "btn_clr_osy_contactspotentialmember_name"));
+						});
+		
+					$("#lead_name,#btn_lead_name").blur(function(){
+							osy_lock_field("lead_name", new Array("account_name", "btn_account_name","btn_clr_account_name", "contact_name", "btn_clr_contact_name", "btn_contact_name"));
+						});
+					$("#btn_clr_lead_name").click(function(){
+							osy_unlock_fields(new Array("account_name", "btn_account_name","btn_clr_account_name", "contact_name", "btn_clr_contact_name", "btn_clr_contact_name", "btn_contact_name"));
+						});
+					
+					$("#osy_contactspotentialmember_name,#btn_osy_contactspotentialmember_name").blur(function(){
+						$("#lead_name").blur();
+					});
+
+					$("#btn_contact_name").blur(function(){
+						$("#account_name").blur();
+					});
+					
+					// al load della pagina faccio scattare questi eventi per disabilitare certi campi.
+					$("#account_name").blur();
+					$("#lead_name").blur();
+					
+				});
+				{/literal}
+			</script>
+
+    		',
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
+      'syncDetailEditViews' => true,
+      'includes' => 
+      array (
+        2 => 
+        array (
+          'file' => 'custom/include/osyRelateUtils.js.php',
+        ),
+      ),
+    ),
+    'panels' => 
+    array (
+      'default' => 
+      array (
+        0 => 
+        array (
+          0 => 'account_name',
+          1 => 
+          array (
+            'name' => 'lead_name',
+            'studio' => 'visible',
+            'label' => 'LBL_LEAD_NAME',
+            'displayParams' => 
+            array (
+              'field_to_name_array' => 
+              array (
+                'id' => 'lead_id',
+                'account_name' => 'lead_name',
+              ),
+            ),
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'contact_name',
+            'displayParams' => 
+            array (
+              'initial_filter' => '&account_name_advanced=" + document.getElementById("account_name").value + "&account_name=" + document.getElementById("account_name").value + "&account_id=" + document.getElementById("osy_account_id").value + "',
+              'field_to_name_array' => 
+              array (
+                'id' => 'contact_id',
+                'name' => 'contact_name',
+                'account_name' => 'account_name',
+                'account_id' => 'osy_account_id',
+              ),
+            ),
+          ),
+          1 => 
+          array (
+            'name' => 'osy_contactspotentialmember_name',
+            'displayParams' => 
+            array (
+              'initial_filter' => '&lead_name_advanced=" + document.getElementById("lead_name").value + "&lead_name=" + document.getElementById("lead_name").value + "&lead_id=" + document.getElementById("lead_id").value + "',
+              'field_to_name_array' => 
+              array (
+                'id' => 'osy_contactspotentialmember_id',
+                'name' => 'osy_contactspotentialmember_name',
+                'lead_name' => 'lead_name',
+                'lead_id' => 'lead_id',
+              ),
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'service_status_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SERVICE_STATUS',
+          ),
+          1 => '',
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'subject',
+            'label' => 'LBL_SUBJECT',
+          ),
+          1 => 
+          array (
+            'name' => 'subject_description',
+            'label' => 'LBL_SUBJECT_DESCRIPTION',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'mode_of_intervention',
+            'comment' => '',
+            'studio' => 'visible',
+            'label' => 'LBL_MODE_OF_INTERVENTION',
+          ),
+          1 => 
+          array (
+            'name' => 'duration',
+            'label' => 'LBL_DURATION',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'service_free_charge_c',
+            'studio' => 'visible',
+            'label' => 'LBL_SERVICE_FREE_CHARGE',
+          ),
+          1 => '',
+        ),
+        6 => 
+        array (
+          0 => 'description',
+        ),
+        7 => 
+        array (
+          0 => 'assigned_user_name',
+        ),
+      ),
+    ),
+  ),
+);
+;
+?>

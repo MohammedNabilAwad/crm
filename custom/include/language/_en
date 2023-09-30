@@ -1,0 +1,172 @@
+<?php 
+$app_list_strings['moduleList']['Accounts'] = 'Members';
+$app_list_strings['moduleList']['Opportunities'] = 'Subscription Fees';
+$app_list_strings['moduleList']['Leads'] = 'Potential Members';
+
+//custom/modules/Activities/views/view.popup.php
+$app_strings['DATA_TYPE_END'] = 'End:'; 
+$app_strings['DATA_TYPE_ENTERED'] = 'Created:'; 
+
+/* members dropdown */
+
+$GLOBALS['app_list_strings']['osy_member_type_list']=array (
+		'' => '',
+		1 => 'Direct Company',
+		2 => 'Association',
+		3 => 'Indirect Member',
+);
+
+$GLOBALS['app_list_strings']['osy_industries_list']=array (
+		'' => '',
+		1 => 'Agriculture, plantation, other rural sectors',
+		2 => 'Metal production, Mechanical and Electrical Engineering',
+		3 => 'Chemical and Pharmaceutical',
+		4 => 'Wholesale Trade',
+		5 => 'Retail',
+		6 => 'Construction',
+		7 => 'Education Service',
+		8 => 'Financial Service and Insurance',
+		9 => 'Food, beverage and tobacco',
+		10 => 'Forestry, wood, pulp and paper',
+		11 => 'Health care and social assistance',
+		12 => 'Tourism, Hotel, Catering',
+		13 => 'Mechanical and Electrical Engineering',
+		14 => 'Printing & Publishing, Media, Culture and entertainment',
+		15 => 'Mining',
+		16 => 'Oil and gas production; oil refining',
+		17 => 'Information Communications Technologies (ICT)',
+		18 => 'Security',
+		19 => 'Ports and inland waterways infrastructures',
+		20 => 'Transport (including civil aviation; railways; road transport; Shipping)',
+		21 => 'Fishing',
+		22 => 'Textile, clothing, Leather, footwear and apparel',
+		23 => 'Utilities (water; gas; electricity)',
+		24 => 'Real Estate, Rental and Leasing',
+		25 => 'Temporary agencies',
+		26 => 'Other',
+);
+
+$GLOBALS['app_list_strings']['osy_nr_employees_list']=array (
+		'' => '',
+		1 => 'From 1 to 10',
+		2 => 'From 11 to 20',
+		3 => 'From 21 to 50',
+		4 => 'From 51 to 100',
+		5 => 'From 101 to 200',
+		6 => 'From 201 to 500',
+		7 => 'From 501 to 1000',
+		8 => 'More than 1000',
+);
+
+$GLOBALS['app_list_strings']['osy_contract_list']=array (
+		'' => '',
+		1 => 'Included',
+		2 => 'Escluded',
+);
+
+$GLOBALS['app_list_strings']['osy_ownership_list']=array (
+		'' => '',
+		1 => 'National - Private Sector',
+		2 => 'Public Ownership',
+		3 => 'Foreign - Private Sector',
+		4 => 'Not for profit',
+		5 => 'Other',
+);
+
+$GLOBALS['app_list_strings']['osy_association_member_type_list']=array (
+		'' => '',
+		1 => 'Sectorial',
+		2 => 'Territorial',
+		3 => 'Other',
+);
+
+$GLOBALS['app_list_strings']['osy_territorials_list']=array (
+		'' => '',
+		1 => 'County',
+		2 => 'Province',
+		3 => 'Cities',
+);
+
+$GLOBALS['app_list_strings']['osy_member_categories_list']=array (
+		'' => '',
+		1 => 'Gold',
+		2 => 'Silver',
+		3 => 'Bronze',
+);
+
+$GLOBALS['app_list_strings']['osy_membership_status_list']=array (
+		'' => '',
+		1 => 'Active Member',
+		2 => 'Lost Member',
+		3 => 'Suspended Member',
+);
+
+$GLOBALS['app_list_strings']['osy_levels_list']=array (
+		'' => '',
+		1 => 'Ordinary',
+		2 => 'Subcategories',
+);
+
+/* contacts dropdown */
+
+$GLOBALS['app_list_strings']['osy_role_function_list']=array (
+		'' => '',
+		1 => 'President',
+		2 => 'Vice President',
+		3 => 'Manager',
+		99 => 'Other',
+);
+
+$GLOBALS['app_list_strings']['osy_categories_list']=array (
+		'' => '',
+		1 => 'Internal',
+		2 => 'External',
+);
+
+$GLOBALS['app_list_strings']['osy_contact_type_list']=array (
+		'' => '',
+		1 => 'Main Representative',
+		2 => 'Administrative Contact',
+);
+
+/* opportunities dropdown */
+
+$GLOBALS['app_list_strings']['osy_subscription_type_list']=array (
+		'' => '',
+		1 => 'subscription type 1',
+		2 => 'subscription type 2',
+		3 => 'subscription type 3',
+);
+
+$GLOBALS['app_list_strings']['osy_subscription_criteria_list']=array (
+		'' => '',
+		1 => 'subscription criteria 1',
+		2 => 'subscription criteria 2',
+		3 => 'subscription criteria 3',
+);
+
+$GLOBALS['app_list_strings']['osy_subscription_duration_list']=array (
+		'' => '',
+		1 => 'subscription duration 1',
+		2 => 'subscription duration 2',
+		3 => 'subscription duration 3',
+);
+
+$GLOBALS['app_list_strings']['osy_next_action_list']=array (
+		'' => '',
+		1 => 'subscription next_action 1',
+		2 => 'subscription next_action 2',
+		3 => 'subscription next_action 3',
+		);
+
+$GLOBALS['app_list_strings']['osy_payment_status_list']=array (
+		'' => '',
+		1 => 'Paid',
+		2 => 'Not Paid',
+);
+
+$GLOBALS['app_list_strings']['parent_type_display']=array (
+  'Accounts' => 'Member',
+  'Leads' => 'Potential Member',
+  'ProspectLists' => 'ProspectList',
+);

@@ -1,0 +1,45 @@
+<?php
+/***CONFIGURATOR***/
+$sugar_config['default_currency_iso4217'] = 'EUR';
+$sugar_config['default_currency_name'] = 'EURO';
+$sugar_config['default_currency_symbol'] = '€';
+$sugar_config['default_date_format'] = 'm/d/Y';
+$sugar_config['default_decimal_seperator'] = ',';
+$sugar_config['default_number_grouping_seperator'] = '.';
+$sugar_config['default_time_format'] = 'H:i';
+$sugar_config['email_xss'] = 'YToxOntzOjY6InNjcmlwdCI7czo2OiJzY3JpcHQiO30=';
+$sugar_config['default_module_favicon'] = false;
+$sugar_config['dashlet_auto_refresh_min'] = '-1';
+$sugar_config['enable_action_menu'] = false;
+$sugar_config['stack_trace_errors'] = false;
+$sugar_config['developerMode'] = true;
+$sugar_config['passwordsetting']['SystemGeneratedPasswordON'] = '0';
+$sugar_config['passwordsetting']['forgotpasswordON'] = '0';
+$sugar_config['SAML_loginurl'] = '';
+$sugar_config['SAML_X509Cert'] = '';
+$sugar_config['authenticationClass'] = '';
+$sugar_config['addAjaxBannedModules'][0] = 'osy_services_companies';
+$sugar_config['addAjaxBannedModules'][1] = 'osy_other_contacts';
+$sugar_config['addAjaxBannedModules'][2] = 'osy_service';
+$sugar_config['addAjaxBannedModules'][3] = 'ZuckerReports';
+$sugar_config['addAjaxBannedModules'][4] = 'Bugs';
+$sugar_config['addAjaxBannedModules'][5] = 'Cases';
+$sugar_config['addAjaxBannedModules'][6] = 'ProspectLists';
+$sugar_config['addAjaxBannedModules'][7] = 'Accounts';
+$sugar_config['addAjaxBannedModules'][8] = 'Prospects';
+$sugar_config['addAjaxBannedModules'][9] = 'Opportunities';
+$sugar_config['addAjaxBannedModules'][10] = 'Contacts';
+$sugar_config['addAjaxBannedModules'][11] = 'Notes';
+$sugar_config['addAjaxBannedModules'][12] = 'Meetings';
+$sugar_config['addAjaxBannedModules'][13] = 'Leads';
+$sugar_config['addAjaxBannedModules'][14] = 'Calls';
+$sugar_config['addAjaxBannedModules'][15] = 'Home';
+$sugar_config['addAjaxBannedModules'][16] = 'Tasks';
+$sugar_config['lead_conv_activity_opt'] = 'move';
+$sugar_config['disabled_languages'] = 'it_it';
+$sugar_config['disable_convert_lead'] = false;
+$sugar_config['email_default_delete_attachments'] = false;
+$sugar_config['export_delimiter'] = '|';
+$sugar_config['email_confirm_opt_in_email_template_id'] = '';
+$sugar_config['email_allow_send_as_user'] = false;
+/***CONFIGURATOR***/

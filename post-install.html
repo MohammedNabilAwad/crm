@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="custom/include/jquery_progressbar/themes/base/jquery-ui.css" />
+<script src="include/javascript/jquery/jquery-min.js"></script>
+<script src="custom/include/jquery_progressbar/minified/jquery-ui.custom.min.js"></script>
+
+<style>
+.ui-progressbar {
+position: relative;
+}
+.progress-label {
+left: 50%;
+top: 4px;
+font-weight: bold;
+text-align: center;
+}
+</style>
+
+<script>
+$(function() {
+var progressbar = $( "#progressbar" ),
+progressLabel = $( ".progress-label" );
+progressbar.progressbar({
+value: false
+});
+});
+</script>
+
+</head>
+<body>
+<form id="post_install_form" action="post_install_step2.php" method="POST" name="post_install_form">
+<table style="border-top-width: 1px; border-top-style: solid; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px 6px 12px 10px; background-color: #e9f3ff; font-size: 12px; width: 100%; background-position: 50% 0%; background-repeat: repeat no-repeat;">
+<tbody>
+<tr style="color: #0069e1; font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 18px; font-weight: bold; margin-bottom: 0px; margin-top: 0px;" align="center">
+<td colspan="4">
+<h2>Post-installation setup</h2>
+<h4>Welcome to the post-installation setup!</h4>
+</td>
+</tr>
+<tr style="color: #0069e1; font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 18px; font-weight: bold; margin-bottom: 0px; margin-top: 0px;" align="center">
+<td>
+<h5>Click the button below to run the setup and complete the installation of SugarCRM</h5>
+</td>
+
+<div id="progressbar" style="display:none;" ><div class="progress-label">Loading... Please wait...</div></div>
+<br/>
+
+</tr>
+<tr style="color: #0069e1; font-family: Arial,Verdana,Helvetica,sans-serif; font-size: 2px; font-weight: normal; margin-bottom: 0px; margin-top: 0px;" align="center">
+<td colspan="4"> </td>
+</tr>
+<tr align="center">
+<td colspan="10"><input class="button" type="button" onclick="osyOnsubmit(this.form);" id="complete_installation_button" name="complete_installation_button" value="Complete installation" /></td>
+</tr>
+</tbody>
+</table>
+</form>
+</body>
+</html>
+
+<script>
+function osyOnsubmit(oForm){
+	document.getElementById("complete_installation_button").setAttribute("disabled", "disabled");
+	document.getElementById("progressbar").setAttribute("style", "display:visible;");
+	oForm.submit();
+}
+</script>

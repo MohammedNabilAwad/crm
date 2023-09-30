@@ -1,0 +1,213 @@
+<?php
+$viewdefs ['osy_contactspotentialmember'] ['EditView'] = array (
+		'templateMeta' => array (
+				'maxColumns' => '2',
+				'widths' => array (
+						array (
+								'label' => '10',
+								'field' => '30'
+						),
+						array (
+								'label' => '10',
+								'field' => '30'
+						)
+				),
+				'includes' => array (
+						array (
+								'file' => 'custom/include/osyDependency.js'
+						),
+
+						array (
+								'file' => 'custom/include/osyRelateUtils.js.php'
+						),
+						array (
+								'file' => 'custom/modules/Contacts/osyDependency.js.php'
+						)
+				),
+				'useTabs' => false,
+				'tabDefs' => array (
+						'LBL_CONTACT_INFORMATION' => array (
+								'newTab' => false,
+								'panelDefault' => 'expanded'
+						),
+						'LBL_PANEL_ADVANCED' => array (
+								'newTab' => false,
+								'panelDefault' => 'expanded'
+						),
+						'LBL_PANEL_ASSIGNMENT' => array (
+								'newTab' => false,
+								'panelDefault' => 'expanded'
+						)
+				),
+				'syncDetailEditViews' => true,
+				'javascript' => '
+		    		<script type="text/javascript">
+		    		{literal}
+						YAHOO.util.Event.onDOMReady(function() {
+							overrideSqsObject("lead_name",function(oSqsObject) {
+								oSqsObject["field_list"] = [
+									"account_name",
+									"id",
+									"primary_address_street",
+									"primary_address_city",
+									"primary_address_state",
+									"primary_address_pobox_c",
+									"primary_address_postalcode",
+									"primary_address_region_c",
+									"primary_address_other",
+									"alt_address_street",
+									"alt_address_city",
+									"alt_address_state",
+									"alt_address_pobox_c",
+									"alt_address_postalcode",
+									"alt_address_region_c",
+									"alt_address_other",
+									"phone_work",
+									];
+								oSqsObject["populate_list"] = [
+									"lead_name",
+									"lead_id",
+									"primary_address_street",
+									"primary_address_city",
+									"primary_address_state",
+									"primary_address_pobox_c",
+									"primary_address_postalcode",
+									"primary_address_region_c",
+									"primary_address_other",
+									"alt_address_street",
+									"alt_address_city",
+									"alt_address_state",
+									"alt_address_pobox_c",
+									"alt_address_postalcode",
+									"alt_address_region_c",
+									"alt_address_other",
+									"phone_work",
+									];
+								oSqsObject["conditions"][0]["name"] = "account_name";
+								return oSqsObject;
+							});
+						});
+			    		if(typeof(SUGAR) != \'undefined\' &&  typeof(SUGAR.util) != \'undefined\'
+							&&  typeof(SUGAR.util.doWhen) != \'undefined\') {
+								SUGAR.util.doWhen(document.getElementById(\'footer\')
+									&& typeof(HideViewFields) != \'undefined\', function() {
+						    			HideViewFields();
+						    			YAHOO.util.Event.addListener(\'role_function\', \'change\',  HideViewFields );
+								}
+							)
+						};
+
+		    		{/literal}
+		    		</script>'
+		),
+		'panels' => array (
+				'lbl_contact_information' => array (
+
+						array (
+								'last_name',
+								array (
+										'name' => 'first_name',
+										'customCode' => '{html_options name="salutation" id="salutation" options=$fields.salutation.options selected=$fields.salutation.value}' . '&nbsp;<input name="first_name"  id="first_name" size="25" maxlength="25" type="text" value="{$fields.first_name.value}">'
+								)
+						),
+
+						array (
+								'gender',
+								array (
+										'name' => 'lead_name',
+										'displayParams' => array (
+												'required' => true,
+												'field_to_name_array' => array (
+														'id' => 'lead_id',
+														'account_name' => 'lead_name',
+														'primary_address_street' => 'primary_address_street',
+														'primary_address_city' => 'primary_address_city',
+														'primary_address_state' => 'primary_address_state',
+														'primary_address_pobox_c' => 'primary_address_pobox_c',
+														'primary_address_postalcode' => 'primary_address_postalcode',
+														'primary_address_region_c' => 'primary_address_region_c',
+														'primary_address_other' => 'primary_address_other',
+														'alt_address_street' => 'alt_address_street',
+														'alt_address_city' => 'alt_address_city',
+														'alt_address_state' => 'alt_address_state',
+														'alt_address_pobox_c' => 'alt_address_pobox_c',
+														'alt_address_postalcode' => 'alt_address_postalcode',
+														'alt_address_region_c' => 'alt_address_region_c',
+														'alt_address_other' => 'alt_address_other',
+														'phone_work' => 'phone_work',
+												)
+										)
+								)
+						),
+
+						array (
+								'phone_work',
+								'phone_fax'
+						),
+
+						array (
+								array (
+										'name' => 'primary_address_street',
+										'hideLabel' => true,
+										'type' => 'osyaddress',
+										'displayParams' => array (
+												'key' => 'primary',
+												'rows' => 2,
+												'cols' => 30,
+												'maxlength' => 150
+										)
+								),
+								array (
+										'name' => 'alt_address_street',
+										'hideLabel' => true,
+										'type' => 'osyaddress',
+										'displayParams' => array (
+												'key' => 'alt',
+												'copy' => 'primary',
+												'rows' => 2,
+												'cols' => 30,
+												'maxlength' => 150
+										)
+								)
+						),
+						array (
+								'email1'
+						),
+						array (
+								'description'
+						)
+				),
+				'LBL_PANEL_ADVANCED' => array (
+						array (
+								'role_function',
+								'other_role_function'
+						),
+						// OPENSYMBOLMOD - START - davide.dallapozza - 25/feb/2014
+						// *************************************************
+
+						array (
+								// 'contact_type',
+								'vip',
+								''
+						),
+
+						// OPENSYMBOLMOD - END - davide.dallapozza
+						// *************************************************
+						array (
+								'category',
+								'main_representative'
+						),
+						array (
+								'name' => 'sync_contact',
+								'name' => 'do_not_call'
+						)
+				),
+				'LBL_PANEL_ASSIGNMENT' => array (
+						array (
+								'assigned_user_name'
+						)
+				)
+		)
+);
+
+?>
